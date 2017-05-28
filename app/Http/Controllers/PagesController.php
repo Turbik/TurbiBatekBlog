@@ -34,7 +34,7 @@ class PagesController extends Controller {
 			);
 		Mail::send('emails.contact', $data, function($message) use ($data){
 			$message->from($data['email']);
-			$message->to('p.turbak@gdevmarketer.io');
+			$message->to('p.turbak@gmail.com');
 			$message->subject($data['subject']);
 		});
 		Session::flash('success', 'Mail został wysłany!');
